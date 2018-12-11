@@ -1,0 +1,10 @@
+---
+- hosts: VM_16_3_centos
+  remote_user: hh
+  tasks:
+      - name: debug
+        debug: msg="The {{ inventory_hostname }} Value is {{ ssh_user }}"
+      
+      - name: test connection
+        ping:
+        remote_user: hh

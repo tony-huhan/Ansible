@@ -1,0 +1,11 @@
+all:
+  hosts:
+    VM_16_3_centos:
+  children:
+    nginx:
+      hosts:
+        localhost:
+  vars:
+    ntp_server: ntp.atlanta.example.com
+    proxy: proxy.atlanta.example.com
+  
